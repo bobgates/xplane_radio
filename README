@@ -1,0 +1,23 @@
+This is a basic radio panel that works with X-plane.
+
+The hardware is an Arduino, connected to an LCD display 
+and a matrix keypad. 11 keys are used to implement the
+six radio choices: com1, com2, nav1, nav2, adf1, adf2,
+to switch active and standby frequencies and to increment
+and decrement. I use two buttons for increment, two for
+decrement, as I don't yet have suitable rotary encoders.
+
+The Arduino side is completely dumb. All interactions are
+sent to the X-plane plugin, which sends all D values back.
+
+The plugin is written in Python and requires Sandy Barbour's
+python interface plugin for X-plane, and it requires the 
+PySerial library to be installed. 
+
+This was written on a Mac. If you want to work on another 
+machine, you'll need to edit the port name in line 125. Even
+on a mac, your com port will probably have a different name 
+as it is set by your USB to serial driver.
+
+Bob Gates
+7 Jan 2011
